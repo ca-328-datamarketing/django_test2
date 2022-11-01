@@ -1,0 +1,29 @@
+<h3>delete confirm page</h3>
+<a href="{%url 'tasks'%}">go back</a>
+<h4>Are you sure to delete the {{delete.title}} task created by {{delete.user}}?</h4>
+
+
+<table>
+    <tr>
+        <th>Items</th>
+        <th></th>
+        <th>Detail</th>
+
+    </tr>
+
+    <tr>
+        <th>{{delete.title}}</th>
+        <th></th>
+        <th>{{delete.description}}</th>
+    </tr>
+
+
+</table>
+
+
+
+<form method = "POST",action="">
+    {%csrf_token%}
+    <input type="submit" value="confirm to delete">
+
+</form>
